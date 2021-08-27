@@ -1,0 +1,65 @@
+GET http://localhost:8080/tasks
+
+###
+POST http://localhost:8080/tasks/create
+Content-Type: application/json
+
+{
+    "text":"make toast"
+}
+
+###
+DELETE http://localhost:8080/tasks/delete/61279121db84bbff7adb5a91
+
+###
+PATCH http://localhost:8080/tasks/update/6126422222870c097253cc42
+Content-Type: application/json
+
+{
+        "done": false
+}
+
+###
+GET http://localhost:8080/columns
+
+###
+POST http://localhost:8080/columns/create
+Content-Type: application/json
+
+{
+    "title": "home",
+    "taskIds": ["61279121db84bbff7adb5a93", "612799785fdb4004fc224c02"]
+}
+
+###
+DELETE http://localhost:8080/columns/delete/61279ba3d812cc061902d27c
+
+###
+PATCH http://localhost:8080/columns/update/6128dfe54c5a2e7daa9af183
+Content-Type: application/json
+
+{
+    "title": "office",
+    "taskIds": ["61279121db84bbff7adb5a93", "612799785fdb4004fc224c02"]
+}
+###
+GET http://localhost:8080/column-order
+
+###
+POST http://localhost:8080/column-order/create
+Content-Type: application/json
+
+{
+    "columnOrder": ["6128dfe54c5a2e7daa9af183", "6128eed1882411849d3ad3eb"]
+}
+
+###
+DELETE http://localhost:8080/column-order/delete/6128eede882411849d3ad3ed
+
+###
+PATCH http://localhost:8080/column-order/update/6128eede882411849d3ad3ed
+Content-Type: application/json
+
+{
+    "columnOrder": ["6128eed1882411849d3ad3eb","6128dfe54c5a2e7daa9af183" ]
+}
