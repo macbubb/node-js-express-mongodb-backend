@@ -7,10 +7,16 @@ dotenv.config();
 
 const app = express();
 
+//this is the whitelist for frontend domain and ports
 var corsOptions = {
-  origin: 'http://localhost:3001',
+  origin: [
+    'http://localhost:3001',
+    'http://localhost:3000',
+    'http://192.168.0.145:3000',
+    '192.168.0.152',
+  ],
 };
-app.use(cors(corsOptions));
+app.use(cors());
 
 // parse requests of content-type - application/json
 app.use(express.json());

@@ -31,9 +31,10 @@ router.route('/update/:id').patch(async (req, res) => {
   try {
     const oldTask = await taskModel.findById(id);
     const updatedTask = await taskModel.findByIdAndUpdate(id, {
-      text: req.body.text || oldTask.text,
-      done: req.body.done || oldTask.done,
+      text: req.body.text,
+      done: req.body.done,
     });
+    if (process.env.verbose) console.log(req.body);
     res.status(201).json({ updatedTask });
   } catch (err) {
     res.status(400).json({ message: err.message });

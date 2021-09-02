@@ -39,8 +39,8 @@ PATCH http://localhost:8080/columns/update/6128dfe54c5a2e7daa9af183
 Content-Type: application/json
 
 {
-    "title": "office",
-    "taskIds": ["61279121db84bbff7adb5a93", "612799785fdb4004fc224c02"]
+    "title": "out",
+    "taskIds": []
 }
 ###
 GET http://localhost:8080/column-order
@@ -57,9 +57,9 @@ Content-Type: application/json
 DELETE http://localhost:8080/column-order/delete/6128eede882411849d3ad3ed
 
 ###
-PATCH http://localhost:8080/column-order/update/6128eede882411849d3ad3ed
+PATCH http://localhost:8080/column-order/update/6128f05050dc72853b6a9487
 Content-Type: application/json
 
 {
-    "columnOrder": ["6128eed1882411849d3ad3eb","6128dfe54c5a2e7daa9af183" ]
+    "columnOrder": ["6128eed1882411849d3ad3eb", "6128dfe54c5a2e7daa9af183"]
 }
